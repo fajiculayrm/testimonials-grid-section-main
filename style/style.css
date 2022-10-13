@@ -27,9 +27,9 @@ main {
     margin-top: 5rem;
     color: var(--white);
 }
-@media (min-width: 47rem) {
+@media (min-width: 48rem) {
     main {
-        margin-top: 1rem;
+        margin-top: 3rem;
     }
 }
 
@@ -59,11 +59,11 @@ section {
 }
 
 img {
-    /* height: 1.875rem;
-    width: 1.875rem; */
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
+    vertical-align: baseline;
+    border: 0.2rem solid var(--white);
     vertical-align: text-bottom;
 }
 
@@ -84,6 +84,7 @@ h2 span {
 h3 {
     margin-top: 1rem;
     font-size: 1.4rem;
+    opacity: 0.8;
 }
 
 p {
@@ -98,9 +99,15 @@ p {
     background-repeat: no-repeat;
     background-position: right 2rem top;
 }
+.card:nth-child(1) img {
+    border-color: hsl(264, 84%, 71%);
+}
 .card:nth-child(2) {
     grid-area: card2;
     background-color: var(--card2);
+}
+.card:nth-child(2) img {
+    border-color: var(--card2);
 }
 .card:nth-child(3) {
     grid-area: card3;
@@ -111,19 +118,14 @@ p {
     grid-area: card4;
     background-color: var(--card3);
 }
+.card:nth-child(4) img {
+    border-color: hsl(264, 84%, 71%);
+}
 .card:nth-child(5) {
     grid-area: card5;
     background-color: var(--white);
     color: var(--card3);
 }
-.card:nth-child(3) h2,
-.card:nth-child(3) h3,
-.card:nth-child(5) h2,
-.card:nth-child(5) h3 {
-    color: var(--card2);
-    opacity: 0.8;
-}
-
 .attribution {
     font-size: 11px;
     text-align: center;
