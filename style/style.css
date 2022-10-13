@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font: "Barlow Semi Condensed", sans-serif;
+    --card1: hsl(263, 55%, 52%);
+    --card2: hsl(217, 19%, 35%);
+    --card3: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --body-bg: hsl(210, 46%, 95%);
+    --gray: hsl(0, 0%, 81%);
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--main-font);
+    background-color: var(--body-bg);
+}
+
+main {
+    width: 100%;
+    margin-top: 5rem;
+    color: var(--white);
+}
+@media (min-width: 47rem) {
+    main {
+        margin-top: 1rem;
+    }
+}
+
+section {
+    margin: 0 auto;
+    width: min(90%, 69.375rem);
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5";
+}
+@media (min-width: 48rem) {
+    section {
+        grid-template-areas:
+            "card1 card1 card2 card5"
+            "card3 card4 card4 card5";
+    }
+}
+
+.card {
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+img {
+    /* height: 1.875rem;
+    width: 1.875rem; */
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    vertical-align: text-bottom;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 0.8125rem;
+    margin-left: 1rem;
+    display: inline-block;
+    font-size: 0.9375rem;
+}
+
+h2 span {
+    font-size: 0.75rem;
+    display: block;
+    opacity: 0.6;
+}
+
+h3 {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+p {
+    margin-top: 1rem;
+    opacity: 0.6;
+}
+
+.card:nth-child(1) {
+    grid-area: card1;
+    background-color: var(--card1);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: right 2rem top;
+}
+.card:nth-child(2) {
+    grid-area: card2;
+    background-color: var(--card2);
+}
+.card:nth-child(3) {
+    grid-area: card3;
+    background-color: var(--white);
+    color: var(--card3);
+}
+.card:nth-child(4) {
+    grid-area: card4;
+    background-color: var(--card3);
+}
+.card:nth-child(5) {
+    grid-area: card5;
+    background-color: var(--white);
+    color: var(--card3);
+}
+.card:nth-child(3) h2,
+.card:nth-child(3) h3,
+.card:nth-child(5) h2,
+.card:nth-child(5) h3 {
+    color: var(--card2);
+    opacity: 0.8;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
